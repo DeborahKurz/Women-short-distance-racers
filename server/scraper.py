@@ -4,7 +4,7 @@ import requests
 headers = {'use-agent':'my-app/0.0.1'}
 
 #100m dash athlete information
-html_100m = requests.get("https://worldathletics.org/world-rankings/100m/women?regionType=countries&region=usa&page=1&rankDate=2023-10-03", headers=headers)
+html_100m = requests.get("https://worldathletics.org/world-rankings/100m/women?regionType=countries&region=usa&page=1&rank", headers=headers)
 
 doc_100m = BeautifulSoup(html_100m.text, 'html.parser')
 
@@ -25,7 +25,7 @@ for athlete in athletes_100m_raw:
     athletes_100m_data.append(athlete_info)
 
 #200m dash athlete information
-html_200m = requests.get("https://worldathletics.org/world-rankings/200m/women?regionType=countries&region=usa&page=1&rankDate=2023-10-03", headers=headers)
+html_200m = requests.get("https://worldathletics.org/world-rankings/200m/women?regionType=countries&region=usa&page=1&rank", headers=headers)
 
 doc_200m = BeautifulSoup(html_200m.text, 'html.parser')
 athletes_200m_raw = doc_200m.select('.table-row--hover')[:5]
@@ -45,7 +45,7 @@ for athlete in athletes_200m_raw:
     athletes_200m_data.append(athlete_info)
 
 #400m dash athlete information
-html_400m = requests.get("https://worldathletics.org/world-rankings/400m/women?regionType=countries&region=usa&page=1&rankDate=2023-10-03", headers=headers)
+html_400m = requests.get("https://worldathletics.org/world-rankings/400m/women?regionType=countries&region=usa&page=1&rank", headers=headers)
 
 doc_400m = BeautifulSoup(html_400m.text, 'html.parser')
 athletes_400m_raw = doc_400m.select('.table-row--hover')[:5]
@@ -66,7 +66,7 @@ for athlete in athletes_400m_raw:
 
 
 #800m dash athlete information
-html_800m = requests.get("https://worldathletics.org/world-rankings/800m/women?regionType=countries&region=usa&page=1&rankDate=2023-10-03", headers=headers)
+html_800m = requests.get("https://worldathletics.org/world-rankings/800m/women?regionType=countries&region=usa&page=1&rank", headers=headers)
 
 doc_800m = BeautifulSoup(html_800m.text, 'html.parser')
 athletes_800m_raw = doc_800m.select('.table-row--hover')[:5]
