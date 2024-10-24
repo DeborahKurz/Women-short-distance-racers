@@ -10,7 +10,7 @@ from sqlalchemy import MetaData
 app = Flask(__name__)
 
 # Configure the application settings
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///my_database.db'  # Specify your database URI
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///athletes.db'  # Specify your database URI
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False  # Disable track modifications to save resources
 app.json.compact = False  # Set JSON output to be more readable
 

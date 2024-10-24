@@ -1,10 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
 
-
-# #100m dash athlete information
-# html_100m = requests.get("https://worldathletics.org/world-rankings/{race_distance}/women?regionType=countries&region=usa&page=1&rank", headers=headers)
-
 def athletes(race_distance):
     url = f"https://worldathletics.org/world-rankings/{race_distance}/women?regionType=countries&region=usa&page=1&rank"
     headers = {'use-agent':'my-app/0.0.1'}
