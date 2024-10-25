@@ -10,6 +10,7 @@ class Athlete(db.Model, SerializerMixin):
     name = db.Column(db.String, nullable=False)
     rank = db.Column(db.Integer, nullable=False)
     dob = db.Column(db.String)
+    distance = db.Column(db.Integer)
 
     def __repr__(self):
-        return f'<Athlete {self.id}, {self.name}, {self.rank}, {self.dob}'
+        return f'<Athlete {self.id}, {self.name}, {self.rank}, {self.dob}, {self.distance}'
