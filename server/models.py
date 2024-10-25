@@ -1,4 +1,3 @@
-#put the scraped data in the db (scraper.py)
 from flask import Flask
 from sqlalchemy_serializer import SerializerMixin
 from config import db
